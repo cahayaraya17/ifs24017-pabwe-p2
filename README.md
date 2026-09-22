@@ -147,3 +147,5 @@ Tidak membutuhkan server khusus.
 - [x] Semua halaman memiliki navigasi
 - [x] Identitas Cahaya AI konsisten
 - [x] README tersedia
+
+By: Cahaya Silaen
