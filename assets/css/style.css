@@ -43,6 +43,10 @@ a {
     margin-inline: auto;
 }
 
+/* =========================
+   HEADER & NAVIGATION
+   ========================= */
+
 .site-header {
     position: sticky;
     top: 0;
@@ -118,6 +122,37 @@ a {
     background: var(--primary);
 }
 
+/* =========================
+   ACCESSIBILITY
+   ========================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid rgba(108, 77, 246, 0.45);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+/* =========================
+   HERO
+   ========================= */
+
 .hero {
     overflow: hidden;
     padding: 90px 0 110px;
@@ -145,7 +180,7 @@ a {
 .eyebrow {
     display: inline-block;
     margin-bottom: 16px;
-    color: var(--primary);
+    color: var(--primary-dark);
     font-size: 0.75rem;
     font-weight: 800;
     letter-spacing: 0.16em;
@@ -200,12 +235,12 @@ a {
 
 .button-primary {
     color: white;
-    background: var(--primary);
+    background: var(--primary-dark);
     box-shadow: 0 12px 28px rgba(108, 77, 246, 0.24);
 }
 
 .button-primary:hover {
-    background: var(--primary-dark);
+    background: #3f2aa8;
 }
 
 .button-secondary {
@@ -233,8 +268,12 @@ a {
 
 .hero-stats span {
     font-size: 0.8rem;
-    color: #8a90a0;
+    color: #697082;
 }
+
+/* =========================
+   AI VISUAL
+   ========================= */
 
 .hero-visual {
     min-height: 500px;
@@ -337,7 +376,7 @@ a {
 .mini-label {
     display: block;
     margin-bottom: 4px;
-    color: #9f94ff;
+    color: #b5adff;
     font-size: 0.65rem;
     font-weight: 800;
     letter-spacing: 0.15em;
@@ -350,7 +389,7 @@ a {
 
 .insight-card p {
     margin-top: 5px;
-    color: #c9c7db;
+    color: #d2d0df;
     font-size: 0.78rem;
 }
 
@@ -376,6 +415,10 @@ a {
     background: rgba(108, 77, 246, 0.45);
 }
 
+/* =========================
+   SECTIONS
+   ========================= */
+
 .section {
     padding: 100px 0;
 }
@@ -394,6 +437,10 @@ a {
     line-height: 1.15;
     letter-spacing: -0.04em;
 }
+
+/* =========================
+   SERVICES
+   ========================= */
 
 .service-grid {
     display: grid;
@@ -426,7 +473,7 @@ a {
     display: grid;
     place-items: center;
     margin-bottom: 22px;
-    color: var(--primary);
+    color: var(--primary-dark);
     background: #f0edff;
     border-radius: 15px;
     font-size: 1.4rem;
@@ -446,10 +493,14 @@ a {
 
 .service-card a,
 .text-link {
-    color: var(--primary);
+    color: var(--primary-dark);
     font-weight: 700;
     font-size: 0.9rem;
 }
+
+/* =========================
+   ABOUT
+   ========================= */
 
 .about {
     background: var(--light);
@@ -472,7 +523,7 @@ a {
 .number {
     display: block;
     margin-bottom: 40px;
-    color: var(--primary);
+    color: var(--primary-dark);
     font-size: 0.75rem;
     font-weight: 800;
 }
@@ -495,6 +546,10 @@ a {
     margin-bottom: 24px;
 }
 
+/* =========================
+   CONTACT
+   ========================= */
+
 .contact {
     background: #171b2d;
 }
@@ -513,7 +568,7 @@ a {
 
 .contact-box > div > p {
     max-width: 560px;
-    color: #b5bac9;
+    color: #c5c9d5;
 }
 
 .contact-form {
@@ -545,14 +600,18 @@ a {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: var(--primary);
+    border-color: var(--primary-dark);
     box-shadow: 0 0 0 3px rgba(108, 77, 246, 0.1);
 }
+
+/* =========================
+   FOOTER
+   ========================= */
 
 .site-footer {
     padding: 35px 0;
     background: #111423;
-    color: #9da3b5;
+    color: #b4b9c7;
 }
 
 .footer-content {
@@ -578,9 +637,12 @@ a {
     font-weight: 600;
 }
 
-/* Responsive */
+/* =========================
+   RESPONSIVE
+   ========================= */
 
 @media (max-width: 900px) {
+
     .hero-grid,
     .contact-box {
         grid-template-columns: 1fr;
@@ -609,6 +671,7 @@ a {
 }
 
 @media (max-width: 680px) {
+
     .nav-links {
         display: none;
     }

@@ -1,14 +1,17 @@
-```html
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Curriculum Vitae Cahaya - Informatika dan pengembangan solusi AI.">
+    <meta
+        name="description"
+        content="Curriculum Vitae Cahaya - Informatika dan pengembangan solusi AI."
+    >
     <title>CV | Cahaya AI</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
+    ></script>
 
     <style type="text/tailwindcss">
         @theme {
@@ -17,35 +20,106 @@
             --color-ink: #182033;
         }
     </style>
+
+    <style>
+        /* Accessibility: indikator fokus untuk navigasi keyboard */
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        textarea:focus-visible {
+            outline: 3px solid #6c4df6;
+            outline-offset: 3px;
+        }
+
+        /* Skip link */
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 16px;
+            z-index: 9999;
+            padding: 10px 16px;
+            border-radius: 8px;
+            background: #182033;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .skip-link:focus {
+            top: 16px;
+        }
+    </style>
 </head>
 
 <body class="bg-slate-50 text-slate-600 antialiased">
 
-    <header class="border-b border-slate-200 bg-white">
-        <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4" aria-label="Navigasi CV">
+    <a href="#main-content" class="skip-link">
+        Lewati ke konten utama
+    </a>
 
-            <a href="index.html" class="flex items-center gap-2 text-lg font-extrabold text-ink">
-                <span class="grid h-9 w-9 place-items-center rounded-xl bg-cahaya text-white">✦</span>
+    <header class="border-b border-slate-200 bg-white">
+        <nav
+            class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4"
+            aria-label="Navigasi CV"
+        >
+            <a
+                href="index.html"
+                class="flex items-center gap-2 text-lg font-extrabold text-ink"
+                aria-label="Cahaya AI - kembali ke halaman utama"
+            >
+                <span
+                    class="grid h-9 w-9 place-items-center rounded-xl bg-cahaya text-white"
+                    aria-hidden="true"
+                >
+                    ✦
+                </span>
                 Cahaya<span class="text-cahaya">AI</span>
             </a>
 
             <div class="flex items-center gap-4 text-sm font-semibold">
-                <a class="text-slate-600 transition hover:text-cahaya" href="index.html">Home</a>
-                <a class="text-slate-600 transition hover:text-cahaya" href="blog.html">Blog</a>
-                <a class="rounded-full bg-cahaya px-4 py-2 text-white transition hover:bg-cahaya-dark" href="cv.html">CV</a>
-            </div>
+                <a
+                    class="text-slate-700 transition hover:text-cahaya"
+                    href="index.html"
+                >
+                    Home
+                </a>
 
+                <a
+                    class="text-slate-700 transition hover:text-cahaya"
+                    href="blog.html"
+                >
+                    Blog
+                </a>
+
+                <a
+                    class="rounded-full bg-cahaya px-4 py-2 text-white transition hover:bg-cahaya-dark"
+                    href="cv.html"
+                    aria-current="page"
+                >
+                    CV
+                </a>
+            </div>
         </nav>
     </header>
 
-    <main class="mx-auto max-w-6xl px-5 py-8 sm:py-12">
+    <main
+        id="main-content"
+        class="mx-auto max-w-6xl px-5 py-8 sm:py-12"
+    >
 
-        <section class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-10">
-            <div class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
-
+        <!-- PROFILE -->
+        <section
+            class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-10"
+            aria-labelledby="profile-heading"
+        >
+            <div
+                class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between"
+            >
                 <div class="flex flex-col gap-5 sm:flex-row sm:items-center">
 
-                    <div class="grid h-28 w-28 shrink-0 place-items-center rounded-3xl bg-gradient-to-br from-cahaya to-indigo-400 text-4xl font-extrabold text-white shadow-lg">
+                    <div
+                        class="grid h-28 w-28 shrink-0 place-items-center rounded-3xl bg-gradient-to-br from-cahaya to-indigo-400 text-4xl font-extrabold text-white shadow-lg"
+                        aria-hidden="true"
+                    >
                         CS
                     </div>
 
@@ -54,23 +128,34 @@
                             Curriculum Vitae
                         </p>
 
-                        <h1 class="text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
+                        <h1
+                            id="profile-heading"
+                            class="text-4xl font-extrabold tracking-tight text-ink sm:text-5xl"
+                        >
                             Cahaya Silaen
                         </h1>
 
-                        <p class="mt-2 text-lg font-semibold text-slate-500">
-                            Aspiring AI & Web Developer
+                        <p class="mt-2 text-lg font-semibold text-slate-600">
+                            Aspiring AI &amp; Web Developer
                         </p>
 
-                        <div class="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-500">
-                            <span>✉ cahaya@email.com</span>
-                            <span>⌖ Indonesia</span>
+                        <div class="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-600">
+                            <span>
+                                <span aria-hidden="true">✉</span>
+                                cahaya@email.com
+                            </span>
+
+                            <span>
+                                <span aria-hidden="true">⌖</span>
+                                Indonesia
+                            </span>
 
                             <a
                                 class="transition hover:text-cahaya"
                                 href="https://github.com/"
                                 target="_blank"
-                                rel="noopener"
+                                rel="noopener noreferrer"
+                                aria-label="GitHub Cahaya AI, membuka halaman baru"
                             >
                                 GitHub ↗
                             </a>
@@ -79,13 +164,13 @@
                                 class="transition hover:text-cahaya"
                                 href="https://www.linkedin.com/"
                                 target="_blank"
-                                rel="noopener"
+                                rel="noopener noreferrer"
+                                aria-label="LinkedIn Cahaya AI, membuka halaman baru"
                             >
                                 LinkedIn ↗
                             </a>
                         </div>
                     </div>
-
                 </div>
 
                 <a
@@ -94,47 +179,65 @@
                 >
                     Hubungi Saya
                 </a>
-
             </div>
         </section>
 
+        <!-- CONTENT -->
         <div class="mt-6 grid gap-6 lg:grid-cols-[1.5fr_1fr]">
 
+            <!-- LEFT COLUMN -->
             <div class="space-y-6">
 
-                <section class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8">
+                <!-- ABOUT -->
+                <section
+                    class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8"
+                    aria-labelledby="about-heading"
+                >
                     <p class="text-sm font-bold uppercase tracking-[0.18em] text-cahaya">
                         01 — About
                     </p>
 
-                    <h2 class="mt-2 text-2xl font-extrabold text-ink">
+                    <h2
+                        id="about-heading"
+                        class="mt-2 text-2xl font-extrabold text-ink"
+                    >
                         Tentang Saya
                     </h2>
 
-                    <p class="mt-4 leading-7">
+                    <p class="mt-4 leading-7 text-slate-600">
                         Saya merupakan mahasiswa Informatika yang tertarik pada pengembangan web,
                         Artificial Intelligence, dan perancangan solusi digital. Saya senang mempelajari
                         teknologi baru dan mengubah ide menjadi proyek yang dapat digunakan.
                     </p>
 
-                    <p class="mt-3 leading-7">
+                    <p class="mt-3 leading-7 text-slate-600">
                         Saat ini saya mengembangkan kemampuan pada frontend, data, dan konsep AI
                         sambil membangun pengalaman melalui tugas kuliah, organisasi, dan proyek.
                     </p>
                 </section>
 
-                <section class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8">
+                <!-- EDUCATION -->
+                <section
+                    class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8"
+                    aria-labelledby="education-heading"
+                >
                     <p class="text-sm font-bold uppercase tracking-[0.18em] text-cahaya">
                         02 — Education
                     </p>
 
-                    <h2 class="mt-2 text-2xl font-extrabold text-ink">
+                    <h2
+                        id="education-heading"
+                        class="mt-2 text-2xl font-extrabold text-ink"
+                    >
                         Pendidikan
                     </h2>
 
                     <div class="mt-6 border-l-2 border-slate-200 pl-5">
                         <div class="relative">
-                            <span class="absolute -left-[26px] top-1 h-3 w-3 rounded-full bg-cahaya ring-4 ring-white"></span>
+                            <span
+                                class="absolute -left-[26px] top-1 h-3 w-3 rounded-full bg-cahaya ring-4 ring-white"
+                                aria-hidden="true"
+                            ></span>
 
                             <h3 class="font-bold text-ink">
                                 Institut Teknologi Del
@@ -144,20 +247,27 @@
                                 Program Studi Informatika
                             </p>
 
-                            <p class="mt-1 text-sm text-slate-500">
+                            <p class="mt-1 text-sm text-slate-600">
                                 2024 — Sekarang
                             </p>
                         </div>
                     </div>
                 </section>
 
-                <section class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8">
+                <!-- EXPERIENCE -->
+                <section
+                    class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8"
+                    aria-labelledby="experience-heading"
+                >
                     <p class="text-sm font-bold uppercase tracking-[0.18em] text-cahaya">
                         03 — Experience
                     </p>
 
-                    <h2 class="mt-2 text-2xl font-extrabold text-ink">
-                        Pengalaman & Aktivitas
+                    <h2
+                        id="experience-heading"
+                        class="mt-2 text-2xl font-extrabold text-ink"
+                    >
+                        Pengalaman &amp; Aktivitas
                     </h2>
 
                     <div class="mt-6 grid gap-5 md:grid-cols-2">
@@ -168,11 +278,12 @@
                             </span>
 
                             <h3 class="mt-2 font-bold text-ink">
-                                Proyek UI/UX & Web
+                                Proyek UI/UX &amp; Web
                             </h3>
 
-                            <p class="mt-2 text-sm leading-6">
-                                Mengerjakan perancangan antarmuka, evaluasi usability, dan implementasi halaman web untuk kebutuhan akademik.
+                            <p class="mt-2 text-sm leading-6 text-slate-600">
+                                Mengerjakan perancangan antarmuka, evaluasi usability,
+                                dan implementasi halaman web untuk kebutuhan akademik.
                             </p>
                         </article>
 
@@ -182,11 +293,12 @@
                             </span>
 
                             <h3 class="mt-2 font-bold text-ink">
-                                Organisasi & Kepanitiaan
+                                Organisasi &amp; Kepanitiaan
                             </h3>
 
-                            <p class="mt-2 text-sm leading-6">
-                                Berpartisipasi dalam kegiatan mahasiswa untuk mengembangkan komunikasi, kerja sama, dan manajemen waktu.
+                            <p class="mt-2 text-sm leading-6 text-slate-600">
+                                Berpartisipasi dalam kegiatan mahasiswa untuk mengembangkan
+                                komunikasi, kerja sama, dan manajemen waktu.
                             </p>
                         </article>
 
@@ -195,35 +307,73 @@
 
             </div>
 
-            <aside class="space-y-6">
+            <!-- RIGHT COLUMN -->
+            <aside class="space-y-6" aria-label="Informasi tambahan CV">
 
-                <section class="rounded-3xl bg-ink p-6 text-white shadow-sm sm:p-8">
+                <!-- SKILLS -->
+                <section
+                    class="rounded-3xl bg-ink p-6 text-white shadow-sm sm:p-8"
+                    aria-labelledby="skills-heading"
+                >
                     <p class="text-sm font-bold uppercase tracking-[0.18em] text-indigo-300">
                         04 — Skills
                     </p>
 
-                    <h2 class="mt-2 text-2xl font-extrabold">
+                    <h2
+                        id="skills-heading"
+                        class="mt-2 text-2xl font-extrabold"
+                    >
                         Keahlian
                     </h2>
 
                     <div class="mt-6 flex flex-wrap gap-2">
-                        <span class="rounded-full bg-white/10 px-3 py-2 text-sm">HTML</span>
-                        <span class="rounded-full bg-white/10 px-3 py-2 text-sm">CSS</span>
-                        <span class="rounded-full bg-white/10 px-3 py-2 text-sm">Bootstrap 5</span>
-                        <span class="rounded-full bg-white/10 px-3 py-2 text-sm">Tailwind CSS</span>
-                        <span class="rounded-full bg-white/10 px-3 py-2 text-sm">Java</span>
-                        <span class="rounded-full bg-white/10 px-3 py-2 text-sm">Python</span>
-                        <span class="rounded-full bg-white/10 px-3 py-2 text-sm">Git</span>
-                        <span class="rounded-full bg-white/10 px-3 py-2 text-sm">UI/UX</span>
+                        <span class="rounded-full bg-white/10 px-3 py-2 text-sm">
+                            HTML
+                        </span>
+
+                        <span class="rounded-full bg-white/10 px-3 py-2 text-sm">
+                            CSS
+                        </span>
+
+                        <span class="rounded-full bg-white/10 px-3 py-2 text-sm">
+                            Bootstrap 5
+                        </span>
+
+                        <span class="rounded-full bg-white/10 px-3 py-2 text-sm">
+                            Tailwind CSS
+                        </span>
+
+                        <span class="rounded-full bg-white/10 px-3 py-2 text-sm">
+                            Java
+                        </span>
+
+                        <span class="rounded-full bg-white/10 px-3 py-2 text-sm">
+                            Python
+                        </span>
+
+                        <span class="rounded-full bg-white/10 px-3 py-2 text-sm">
+                            Git
+                        </span>
+
+                        <span class="rounded-full bg-white/10 px-3 py-2 text-sm">
+                            UI/UX
+                        </span>
                     </div>
                 </section>
 
-                <section class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8">
+                <!-- PROJECTS -->
+                <section
+                    class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8"
+                    aria-labelledby="projects-heading"
+                >
                     <p class="text-sm font-bold uppercase tracking-[0.18em] text-cahaya">
                         05 — Projects
                     </p>
 
-                    <h2 class="mt-2 text-2xl font-extrabold text-ink">
+                    <h2
+                        id="projects-heading"
+                        class="mt-2 text-2xl font-extrabold text-ink"
+                    >
                         Portfolio
                     </h2>
 
@@ -239,12 +389,15 @@
                                         Cahaya AI Landing Page
                                     </h3>
 
-                                    <p class="mt-1 text-sm">
+                                    <p class="mt-1 text-sm text-slate-600">
                                         Landing page jasa Artificial Intelligence dengan HTML dan CSS murni.
                                     </p>
                                 </div>
 
-                                <span class="text-cahaya transition group-hover:translate-x-1">
+                                <span
+                                    class="text-cahaya transition group-hover:translate-x-1"
+                                    aria-hidden="true"
+                                >
                                     →
                                 </span>
                             </div>
@@ -260,12 +413,15 @@
                                         Cahaya AI Blog
                                     </h3>
 
-                                    <p class="mt-1 text-sm">
+                                    <p class="mt-1 text-sm text-slate-600">
                                         Daftar artikel dan detail blog AI menggunakan Bootstrap 5.
                                     </p>
                                 </div>
 
-                                <span class="text-cahaya transition group-hover:translate-x-1">
+                                <span
+                                    class="text-cahaya transition group-hover:translate-x-1"
+                                    aria-hidden="true"
+                                >
                                     →
                                 </span>
                             </div>
@@ -274,57 +430,74 @@
                     </div>
                 </section>
 
-                <section class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8">
+                <!-- FOCUS -->
+                <section
+                    class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8"
+                    aria-labelledby="focus-heading"
+                >
                     <p class="text-sm font-bold uppercase tracking-[0.18em] text-cahaya">
                         06 — Focus
                     </p>
 
-                    <h2 class="mt-2 text-2xl font-extrabold text-ink">
+                    <h2
+                        id="focus-heading"
+                        class="mt-2 text-2xl font-extrabold text-ink"
+                    >
                         Minat
                     </h2>
 
-                    <ul class="mt-5 space-y-3 text-sm">
+                    <ul class="mt-5 space-y-3 text-sm text-slate-600">
+
                         <li class="flex gap-3">
-                            <span class="text-cahaya">✦</span>
+                            <span class="text-cahaya" aria-hidden="true">✦</span>
                             Artificial Intelligence
                         </li>
 
                         <li class="flex gap-3">
-                            <span class="text-cahaya">✦</span>
+                            <span class="text-cahaya" aria-hidden="true">✦</span>
                             Web Development
                         </li>
 
                         <li class="flex gap-3">
-                            <span class="text-cahaya">✦</span>
+                            <span class="text-cahaya" aria-hidden="true">✦</span>
                             UI/UX Design
                         </li>
 
                         <li class="flex gap-3">
-                            <span class="text-cahaya">✦</span>
-                            Data & Technology
+                            <span class="text-cahaya" aria-hidden="true">✦</span>
+                            Data &amp; Technology
                         </li>
+
                     </ul>
                 </section>
 
             </aside>
-
         </div>
     </main>
 
     <footer class="border-t border-slate-200 bg-white">
-        <div class="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-
+        <div
+            class="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-6 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between"
+        >
             <span>© 2026 Cahaya AI</span>
 
             <div class="flex gap-4">
-                <a class="hover:text-cahaya" href="index.html">Home</a>
-                <a class="hover:text-cahaya" href="blog.html">Blog</a>
-            </div>
+                <a
+                    class="hover:text-cahaya"
+                    href="index.html"
+                >
+                    Home
+                </a>
 
+                <a
+                    class="hover:text-cahaya"
+                    href="blog.html"
+                >
+                    Blog
+                </a>
+            </div>
         </div>
     </footer>
 
 </body>
-
 </html>
-```
