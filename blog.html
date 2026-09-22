@@ -7,10 +7,10 @@
 
     <meta
         name="description"
-        content="Blog Cahaya AI membahas insight seputar Artificial Intelligence."
+        content="Blog Cahaya AI berisi insight dan informasi seputar Artificial Intelligence."
     >
 
-    <title>Blog AI | Cahaya AI</title>
+    <title>Blog | Cahaya AI</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -29,6 +29,15 @@
     <style>
         body {
             background: #f8f9fc;
+        }
+
+        /* Accessibility - Color Contrast */
+        .text-primary {
+            color: #0b5ed7 !important;
+        }
+
+        .text-secondary {
+            color: #5f666d !important;
         }
 
         .brand-logo {
@@ -54,28 +63,15 @@
             object-fit: cover;
         }
 
-        .article-cover {
-            width: 100%;
-            height: 420px;
-            object-fit: cover;
-        }
-
-        .article-content {
-            max-width: 820px;
-        }
-
-        .footer-dark {
-            background: #171b2d;
-        }
-
         /* Accessibility */
         a:focus-visible,
-        button:focus-visible {
+        button:focus-visible,
+        input:focus-visible,
+        textarea:focus-visible {
             outline: 3px solid #6c4df6;
             outline-offset: 3px;
         }
 
-        /* Mengurangi animasi bagi pengguna yang memilih reduced motion */
         @media (prefers-reduced-motion: reduce) {
             html {
                 scroll-behavior: auto;
@@ -96,10 +92,12 @@
 <body>
 
     <header>
+
         <nav
             class="navbar navbar-expand-lg bg-white border-bottom sticky-top"
             aria-label="Navigasi utama"
         >
+
             <div class="container py-2">
 
                 <a
@@ -111,7 +109,8 @@
                         class="bi bi-stars brand-logo me-2"
                         aria-hidden="true"
                     ></i>
-                    Cahaya<span class="text-primary">AI</span>
+
+                    Cahaya<span style="color: #0b5ed7;">AI</span>
                 </a>
 
                 <button
@@ -133,6 +132,7 @@
                     class="collapse navbar-collapse"
                     id="mainNav"
                 >
+
                     <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
 
                         <li class="nav-item">
@@ -147,8 +147,8 @@
                         <li class="nav-item">
                             <a
                                 class="nav-link active"
-                                aria-current="page"
                                 href="blog.html"
+                                aria-current="page"
                             >
                                 Blog
                             </a>
@@ -173,46 +173,46 @@
                         </li>
 
                     </ul>
+
                 </div>
 
             </div>
+
         </nav>
+
     </header>
 
     <main>
 
-        <!-- HERO -->
+        <!-- HERO BLOG -->
         <section
             class="hero-blog text-white py-5"
             aria-labelledby="blog-title"
         >
+
             <div class="container py-5">
 
-                <div class="row align-items-center">
+                <!-- Color dibuat lebih gelap agar memenuhi WCAG AA -->
+                <span
+                    class="badge rounded-pill bg-light mb-3 px-3 py-2"
+                    style="color: #0b5ed7 !important;"
+                >
+                    CAHAYA AI INSIGHT
+                </span>
 
-                    <div class="col-lg-8">
+                <h1
+                    id="blog-title"
+                    class="display-4 fw-bold"
+                >
+                    Insight seputar Artificial Intelligence
+                </h1>
 
-                        <span class="badge rounded-pill bg-light text-primary mb-3 px-3 py-2">
-                            CAHAYA AI INSIGHT
-                        </span>
-
-                        <h1
-                            id="blog-title"
-                            class="display-4 fw-bold"
-                        >
-                            Belajar AI, memahami manfaatnya.
-                        </h1>
-
-                        <p class="lead mb-0">
-                            Kumpulan artikel ringan tentang Artificial Intelligence,
-                            dari generative AI sampai otomasi bisnis.
-                        </p>
-
-                    </div>
-
-                </div>
+                <p class="lead mt-3 mb-0">
+                    Membahas teknologi AI dengan bahasa sederhana dan mudah dipahami.
+                </p>
 
             </div>
+
         </section>
 
         <!-- ARTICLES -->
@@ -220,48 +220,37 @@
             class="py-5"
             aria-labelledby="articles-title"
         >
+
             <div class="container">
 
                 <div
-                    class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4"
+                    class="d-flex justify-content-between align-items-center mb-4"
                 >
 
                     <div>
 
-                        <span class="text-primary fw-bold small">
+                        <!-- Tidak menggunakan text-primary Bootstrap -->
+                        <span
+                            class="fw-bold small"
+                            style="color: #0b5ed7 !important;"
+                        >
                             ARTIKEL TERBARU
                         </span>
 
                         <h2
                             id="articles-title"
-                            class="fw-bold mb-0"
+                            class="fw-bold mt-1"
                         >
-                            Insight tentang AI
+                            Jelajahi Insight AI
                         </h2>
 
                     </div>
 
                     <div
-                        class="d-flex gap-2 flex-wrap"
+                        class="text-secondary small"
                         aria-label="Kategori artikel"
                     >
-
-                        <span class="badge text-bg-primary">
-                            <i
-                                class="bi bi-stars me-1"
-                                aria-hidden="true"
-                            ></i>
-                            Generative AI
-                        </span>
-
-                        <span class="badge text-bg-light border">
-                            Machine Learning
-                        </span>
-
-                        <span class="badge text-bg-light border">
-                            Etika AI
-                        </span>
-
+                        Artificial Intelligence
                     </div>
 
                 </div>
@@ -269,13 +258,14 @@
                 <div class="row g-4">
 
                     <!-- ARTICLE 1 -->
-                    <article class="col-md-6 col-lg-3">
-                        <div class="card h-100 border-0 shadow-sm blog-card">
+                    <div class="col-md-6 col-lg-4">
+
+                        <article class="card blog-card border-0 shadow-sm h-100">
 
                             <img
                                 src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80"
                                 class="card-img-top"
-                                alt="Ilustrasi teknologi generative AI"
+                                alt="Ilustrasi generative AI"
                                 width="900"
                                 height="600"
                                 loading="eager"
@@ -283,55 +273,39 @@
                                 decoding="async"
                             >
 
-                            <div class="card-body d-flex flex-column p-4">
+                            <div class="card-body p-4 d-flex flex-column">
 
                                 <span class="badge text-bg-primary align-self-start mb-3">
-                                    <i
-                                        class="bi bi-stars me-1"
-                                        aria-hidden="true"
-                                    ></i>
                                     Generative AI
                                 </span>
 
                                 <h3 class="h5 fw-bold">
-                                    <a
-                                        class="text-decoration-none text-dark"
-                                        href="blog-detail.html"
-                                    >
-                                        Mengenal Generative AI dan Cara Kerjanya
-                                    </a>
+                                    Mengenal Generative AI dan Cara Kerjanya
                                 </h3>
 
-                                <p class="text-secondary small">
-                                    Memahami konsep dasar model generatif dan contoh
-                                    penggunaannya dalam pekerjaan sehari-hari.
+                                <p class="text-secondary">
+                                    Memahami apa itu Generative AI dan bagaimana teknologi ini menghasilkan
+                                    berbagai jenis konten.
                                 </p>
 
-                                <div class="mt-auto pt-3 border-top small text-secondary">
-
-                                    <i
-                                        class="bi bi-person me-1"
-                                        aria-hidden="true"
-                                    ></i>
-                                    Cahaya AI
-
-                                    <span class="mx-1" aria-hidden="true">•</span>
-
-                                    <i
-                                        class="bi bi-calendar3 me-1"
-                                        aria-hidden="true"
-                                    ></i>
-                                    15 Sep 2026
-
-                                </div>
+                                <a
+                                    href="blog-detail.html"
+                                    class="text-primary fw-semibold text-decoration-none mt-auto"
+                                    aria-label="Baca artikel Mengenal Generative AI dan Cara Kerjanya"
+                                >
+                                    Baca selengkapnya →
+                                </a>
 
                             </div>
-                        </div>
-                    </article>
+
+                        </article>
+
+                    </div>
 
                     <!-- ARTICLE 2 -->
-                    <article class="col-md-6 col-lg-3">
-                        <div class="card h-100 border-0 shadow-sm blog-card">
+                    <div class="col-md-6 col-lg-4">
+
+                        <article class="card blog-card border-0 shadow-sm h-100">
 
                             <img
                                 src="https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&w=900&q=80"
@@ -343,193 +317,149 @@
                                 decoding="async"
                             >
 
-                            <div class="card-body d-flex flex-column p-4">
+                            <div class="card-body p-4 d-flex flex-column">
 
-                                <span class="badge text-bg-success align-self-start mb-3">
-                                    <i
-                                        class="bi bi-diagram-3 me-1"
-                                        aria-hidden="true"
-                                    ></i>
+                                <span class="badge text-bg-primary align-self-start mb-3">
                                     Machine Learning
                                 </span>
 
                                 <h3 class="h5 fw-bold">
-                                    <a
-                                        class="text-decoration-none text-dark"
-                                        href="blog-detail.html"
-                                    >
-                                        Dari Data Menjadi Prediksi
-                                    </a>
+                                    Apa Itu Machine Learning?
                                 </h3>
 
-                                <p class="text-secondary small">
-                                    Mengapa kualitas data menjadi bagian penting ketika
-                                    membangun sistem prediksi berbasis machine learning.
+                                <p class="text-secondary">
+                                    Mengenal konsep dasar machine learning dan bagaimana komputer dapat
+                                    belajar dari data.
                                 </p>
 
-                                <div class="mt-auto pt-3 border-top small text-secondary">
-
-                                    <i
-                                        class="bi bi-person me-1"
-                                        aria-hidden="true"
-                                    ></i>
-                                    Cahaya AI
-
-                                    <span class="mx-1" aria-hidden="true">•</span>
-
-                                    <i
-                                        class="bi bi-calendar3 me-1"
-                                        aria-hidden="true"
-                                    ></i>
-                                    10 Sep 2026
-
-                                </div>
+                                <a
+                                    href="blog-detail.html"
+                                    class="text-primary fw-semibold text-decoration-none mt-auto"
+                                    aria-label="Baca artikel Apa Itu Machine Learning"
+                                >
+                                    Baca selengkapnya →
+                                </a>
 
                             </div>
-                        </div>
-                    </article>
+
+                        </article>
+
+                    </div>
 
                     <!-- ARTICLE 3 -->
-                    <article class="col-md-6 col-lg-3">
-                        <div class="card h-100 border-0 shadow-sm blog-card">
+                    <div class="col-md-6 col-lg-4">
+
+                        <article class="card blog-card border-0 shadow-sm h-100">
 
                             <img
-                                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+                                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"
                                 class="card-img-top"
-                                alt="Ilustrasi bekerja dengan teknologi AI"
+                                alt="Ilustrasi teknologi dan data"
                                 width="900"
                                 height="600"
                                 loading="lazy"
                                 decoding="async"
                             >
 
-                            <div class="card-body d-flex flex-column p-4">
+                            <div class="card-body p-4 d-flex flex-column">
 
-                                <span class="badge text-bg-warning align-self-start mb-3">
-                                    <i
-                                        class="bi bi-shield-check me-1"
-                                        aria-hidden="true"
-                                    ></i>
-                                    Etika AI
+                                <span class="badge text-bg-primary align-self-start mb-3">
+                                    Data
                                 </span>
 
                                 <h3 class="h5 fw-bold">
-                                    <a
-                                        class="text-decoration-none text-dark"
-                                        href="blog-detail.html"
-                                    >
-                                        Mengapa Etika Penting dalam AI?
-                                    </a>
+                                    Mengapa Data Penting untuk AI?
                                 </h3>
 
-                                <p class="text-secondary small">
-                                    Membahas privasi, bias, transparansi, dan tanggung
-                                    jawab saat menggunakan sistem AI.
+                                <p class="text-secondary">
+                                    Data menjadi bagian penting dalam pengembangan sistem AI yang akurat
+                                    dan bermanfaat.
                                 </p>
 
-                                <div class="mt-auto pt-3 border-top small text-secondary">
-
-                                    <i
-                                        class="bi bi-person me-1"
-                                        aria-hidden="true"
-                                    ></i>
-                                    Cahaya AI
-
-                                    <span class="mx-1" aria-hidden="true">•</span>
-
-                                    <i
-                                        class="bi bi-calendar3 me-1"
-                                        aria-hidden="true"
-                                    ></i>
-                                    05 Sep 2026
-
-                                </div>
+                                <a
+                                    href="blog-detail.html"
+                                    class="text-primary fw-semibold text-decoration-none mt-auto"
+                                    aria-label="Baca artikel Mengapa Data Penting untuk AI"
+                                >
+                                    Baca selengkapnya →
+                                </a>
 
                             </div>
-                        </div>
-                    </article>
+
+                        </article>
+
+                    </div>
 
                     <!-- ARTICLE 4 -->
-                    <article class="col-md-6 col-lg-3">
-                        <div class="card h-100 border-0 shadow-sm blog-card">
+                    <div class="col-md-6 col-lg-4">
+
+                        <article class="card blog-card border-0 shadow-sm h-100">
 
                             <img
-                                src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=900&q=80"
+                                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=80"
                                 class="card-img-top"
-                                alt="Ilustrasi otomasi dan teknologi"
+                                alt="Ilustrasi teknologi artificial intelligence"
                                 width="900"
                                 height="600"
                                 loading="lazy"
                                 decoding="async"
                             >
 
-                            <div class="card-body d-flex flex-column p-4">
+                            <div class="card-body p-4 d-flex flex-column">
 
-                                <span class="badge text-bg-info align-self-start mb-3">
-                                    <i
-                                        class="bi bi-robot me-1"
-                                        aria-hidden="true"
-                                    ></i>
-                                    Automasi
+                                <span class="badge text-bg-primary align-self-start mb-3">
+                                    AI
                                 </span>
 
                                 <h3 class="h5 fw-bold">
-                                    <a
-                                        class="text-decoration-none text-dark"
-                                        href="blog-detail.html"
-                                    >
-                                        AI untuk Mengurangi Pekerjaan Berulang
-                                    </a>
+                                    Masa Depan Artificial Intelligence
                                 </h3>
 
-                                <p class="text-secondary small">
-                                    Contoh proses bisnis yang dapat dibantu AI agar tim
-                                    dapat fokus pada pekerjaan yang lebih bernilai.
+                                <p class="text-secondary">
+                                    Melihat bagaimana perkembangan AI dapat memengaruhi berbagai bidang
+                                    kehidupan dan pekerjaan.
                                 </p>
 
-                                <div class="mt-auto pt-3 border-top small text-secondary">
-
-                                    <i
-                                        class="bi bi-person me-1"
-                                        aria-hidden="true"
-                                    ></i>
-                                    Cahaya AI
-
-                                    <span class="mx-1" aria-hidden="true">•</span>
-
-                                    <i
-                                        class="bi bi-calendar3 me-1"
-                                        aria-hidden="true"
-                                    ></i>
-                                    01 Sep 2026
-
-                                </div>
+                                <a
+                                    href="blog-detail.html"
+                                    class="text-primary fw-semibold text-decoration-none mt-auto"
+                                    aria-label="Baca artikel Masa Depan Artificial Intelligence"
+                                >
+                                    Baca selengkapnya →
+                                </a>
 
                             </div>
-                        </div>
-                    </article>
+
+                        </article>
+
+                    </div>
 
                 </div>
+
             </div>
+
         </section>
 
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer-dark text-white mt-4">
+    <footer class="bg-dark text-white py-4">
 
         <div
-            class="container py-4 d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3"
+            class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3"
         >
 
             <div>
 
                 <strong>
+
                     <i
                         class="bi bi-stars me-2"
                         aria-hidden="true"
                     ></i>
+
                     CahayaAI
+
                 </strong>
 
                 <div class="small text-white-50 mt-1">
@@ -542,6 +472,7 @@
                 class="d-flex gap-3 small"
                 aria-label="Navigasi footer"
             >
+
                 <a
                     class="text-white-50 text-decoration-none"
                     href="index.html"
@@ -563,6 +494,7 @@
                 >
                     CV
                 </a>
+
             </div>
 
             <small class="text-white-50">
@@ -570,6 +502,7 @@
             </small>
 
         </div>
+
     </footer>
 
     <!-- Bootstrap JavaScript -->
@@ -580,4 +513,5 @@
     ></script>
 
 </body>
+
 </html>
